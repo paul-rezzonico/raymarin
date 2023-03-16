@@ -10,6 +10,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="Resources\**" />
+      <EmbeddedResource Remove="Resources\**" />
+      <None Remove="Resources\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>
 
