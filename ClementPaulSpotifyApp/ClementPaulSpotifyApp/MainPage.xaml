@@ -1,14 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ClementPaulSpotifyApp"
-             x:Class="ClementPaulSpotifyApp.MainPage">
+﻿<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ClementPaulSpotifyApp"
+       x:Class="ClementPaulSpotifyApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Image Source="logo.png" HeightRequest="40" WidthRequest="40" />
+            <Label Text="Titre de la page" FontSize="Large" FontAttributes="Bold" VerticalTextAlignment="Center" Margin="10,0,0,0" />
+        </StackLayout>
+    </Shell.TitleView>
 
-</ContentPage>
+    <TabBar>
+        <Tab Title="Tab 1">
+            <ShellContent ContentTemplate="{DataTemplate local:Page1}" 
+                      Icon="Ahri72.png" />
+            <!-- Contenu du premier onglet -->
+        </Tab>
+        <Tab Title="Tab 2">
+            <ShellContent ContentTemplate="{DataTemplate local:Page2}" 
+                      Icon="tab2.png" />
+            <!-- Contenu du deuxième onglet -->
+        </Tab>
+        <Tab Title="Tab 3">
+            <ShellContent ContentTemplate="{DataTemplate local:Page3}" 
+                      Icon="tab3.png" />
+            <!-- Contenu du troisième onglet -->
+        </Tab>
+        <Tab Title="Tab 4">
+            <ShellContent ContentTemplate="{DataTemplate local:Page4}" 
+                      Icon="tab4.png" />
+            <!-- Contenu du quatrième onglet -->
+        </Tab>
+    </TabBar>
+
+</Shell>
