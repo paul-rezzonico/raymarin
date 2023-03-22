@@ -2,34 +2,34 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:ClementPaulSpotifyApp"
        x:Class="ClementPaulSpotifyApp.MainPage">
+    
 
     <Shell.TitleView>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-            <Image Source="logo.png" HeightRequest="40" WidthRequest="40" />
             <Label Text="Titre de la page" FontSize="Large" FontAttributes="Bold" VerticalTextAlignment="Center" Margin="10,0,0,0" />
         </StackLayout>
     </Shell.TitleView>
 
     <TabBar>
-        <Tab Title="Tab 1">
-            <ShellContent ContentTemplate="{DataTemplate local:Page1}" 
-                      Icon="Ahri72.png" />
-            <!-- Contenu du premier onglet -->
+        <Tab Title="Tab 1" Icon="favicon.ico">
+            <ShellContent>
+                <local:Page1/>
+            </ShellContent>
         </Tab>
-        <Tab Title="Tab 2">
-            <ShellContent ContentTemplate="{DataTemplate local:Page2}" 
-                      Icon="tab2.png" />
-            <!-- Contenu du deuxième onglet -->
+        <Tab Title="Tab 2" Icon="favicon.ico">
+            <ShellContent>
+                <local:Page2/>
+            </ShellContent>
         </Tab>
-        <Tab Title="Tab 3">
-            <ShellContent ContentTemplate="{DataTemplate local:Page3}" 
-                      Icon="tab3.png" />
-            <!-- Contenu du troisième onglet -->
+        <Tab Title="Tab 3" Icon="favicon.ico">
+            <ShellContent>
+                <local:Page3/>
+            </ShellContent>
         </Tab>
-        <Tab Title="Tab 4">
-            <ShellContent ContentTemplate="{DataTemplate local:Page4}" 
-                      Icon="tab4.png" />
-            <!-- Contenu du quatrième onglet -->
+        <Tab Title="Tab 4" Icon="favicon.ico">
+            <ShellContent>
+                <local:Page4/>
+            </ShellContent>
         </Tab>
     </TabBar>
 

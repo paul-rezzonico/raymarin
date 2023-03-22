@@ -7,6 +7,13 @@
             <Label Text="Welcome From page 1!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button Text="Coucou banane" Clicked="Button_OnClicked">
+            </Button>
+            <Image Source="img.png"/>
+            <FlexLayout Direction="Row">
+                <BoxView FlexLayout.Basis="20%" BackgroundColor="{Binding firstColor}"></BoxView>
+                <BoxView FlexLayout.Basis="20%" BackgroundColor="{Binding secondColor}"></BoxView>
+            </FlexLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

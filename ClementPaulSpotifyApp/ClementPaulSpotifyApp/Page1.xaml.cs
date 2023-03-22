@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XXXXXX;
 
 namespace ClementPaulSpotifyApp
 {
@@ -15,6 +16,12 @@ namespace ClementPaulSpotifyApp
         public Page1()
         {
             InitializeComponent();
+            BindingContext = Page1ViewModel.Instance;
+        }
+
+        private void Button_OnClicked(object sender, EventArgs e)
+        {
+            Page1ViewModel.Instance.UpdateColor();
         }
     }
 }
