@@ -11,22 +11,22 @@
     </Shell.TitleView>
 
     <TabBar>
-        <Tab Title="Tab 1" Icon="favicon.ico">
+        <Tab Title="Tab 1" Icon="tabIcon">
             <ShellContent>
                 <local:Page1/>
             </ShellContent>
         </Tab>
-        <Tab Title="Tab 2" Icon="favicon.ico">
+        <Tab Title="Tab 2" Icon="tabIcon">
             <ShellContent>
                 <local:Page2/>
             </ShellContent>
         </Tab>
-        <Tab Title="Tab 3" Icon="favicon.ico">
+        <Tab Title="Tab 3" Icon="tabIcon">
             <ShellContent>
                 <local:Page3/>
             </ShellContent>
         </Tab>
-        <Tab Title="Tab 4" Icon="favicon.ico">
+        <Tab Title="Tab 4" Icon="tabIcon">
             <ShellContent>
                 <local:Page4/>
             </ShellContent>

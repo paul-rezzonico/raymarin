@@ -4,12 +4,21 @@
              x:Class="ClementPaulSpotifyApp.Page1">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome From page 1!"
+            <Label Text="Application en Xamarin trop cool"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Button Text="Coucou banane" Clicked="Button_OnClicked">
-            </Button>
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="25"/>
+
+            <Label Text="paulrezzonico.com clementraynaud.net"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="15"/>
+
             <Image Source="img.png"/>
+
+            <Button Text="Click HERE !" Clicked="Button_OnClicked">
+            </Button>
+      
             <FlexLayout Direction="Row">
                 <BoxView FlexLayout.Basis="20%" BackgroundColor="{Binding firstColor}"></BoxView>
                 <BoxView FlexLayout.Basis="20%" BackgroundColor="{Binding secondColor}"></BoxView>
