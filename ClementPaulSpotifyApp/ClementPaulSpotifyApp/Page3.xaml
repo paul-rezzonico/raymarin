@@ -4,9 +4,39 @@
              x:Class="ClementPaulSpotifyApp.Page3">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome from page 3"
-                VerticalOptions="CenterAndExpand" 
+            <ActivityIndicator x:Name="loadingIndicator" 
+                   Color="Black"
+                   IsRunning="False"
+                   IsVisible="False"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Image x:Name="albumImage" Source="" />
+            <Label x:Name="albumName" 
+                   FontSize="30" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout x:Name="artistes">
+                <Label Text="Artistes :" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Medium" />
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="" x:Name="releaseDate" FontAttributes="Bold" FontSize="Medium" />
+            </StackLayout>
+
+            <Label Text="Titres de l'album :" FontAttributes="Bold" FontSize="Medium"  HorizontalOptions="CenterAndExpand"/>
+            <ListView x:Name="trackListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" HorizontalOptions="CenterAndExpand">
+                                <Label Text="{Binding Name}" FontSize="18" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

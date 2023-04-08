@@ -34,7 +34,6 @@
                 <Label Text="" x:Name="popularityLabel" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
             </StackLayout>
 
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
