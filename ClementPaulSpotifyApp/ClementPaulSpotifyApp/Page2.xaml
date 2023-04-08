@@ -4,9 +4,13 @@
              x:Class="ClementPaulSpotifyApp.Page2">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome from page 2"
+
+            <Image x:Name="artistImage" Source="" />
+            <Label x:Name="artistName" 
+                   FontSize="25"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
