@@ -69,7 +69,13 @@ namespace ClementPaulSpotifyApp
                 var followers = artist.Followers.Total;
                 if (followers != null)
                 {
-                    artistFollowers.Text = followers.ToString();
+                    nbFollower.Text = followers.ToString();
+                }
+
+                var popularity = artist.Popularity;
+                if (popularity != null)
+                {
+                    popularityLabel.Text = $"Popularité : {artist.Popularity}/100";
                 }
 
                 loadingIndicator.IsVisible = false;

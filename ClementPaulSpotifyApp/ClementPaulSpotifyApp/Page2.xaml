@@ -23,10 +23,16 @@
             </StackLayout>
 
             <Label Text=""  FontSize="Small" />
-            <FlexLayout Direction="Row">
-                <Label Text="Nombre de followers " HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Medium" />
-                <Label />
-            </FlexLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Nombre de followers :   " FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="" x:Name="nbFollower" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            </StackLayout>
+
+            <Label Text=""  FontSize="Small" />
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Popularité :   " FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="" x:Name="popularityLabel" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            </StackLayout>
 
 
         </StackLayout>
