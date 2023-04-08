@@ -5,11 +5,29 @@
     <ContentPage.Content>
         <StackLayout>
 
+            <ActivityIndicator x:Name="loadingIndicator" 
+                   Color="Black"
+                   IsRunning="False"
+                   IsVisible="False"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+
             <Image x:Name="artistImage" Source="" />
             <Label x:Name="artistName" 
-                   FontSize="25"
-                VerticalOptions="CenterAndExpand" 
+                   FontSize="30" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <Label Text=""  FontSize="Small" />
+            <StackLayout x:Name="genres">
+                <Label Text="Genres musicaux de l'artiste :" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Medium" />
+            </StackLayout>
+
+            <Label Text=""  FontSize="Small" />
+            <FlexLayout Direction="Row">
+                <Label Text="Nombre de followers " HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Medium" />
+                <Label />
+            </FlexLayout>
+
 
         </StackLayout>
     </ContentPage.Content>

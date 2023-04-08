@@ -21,6 +21,8 @@ namespace ClementPaulSpotifyApp
 
         private async void LoadData()
         {
+            loadingIndicator.IsVisible = true;
+            loadingIndicator.IsRunning = true;
 
             const string ARTIST_ID = "4gOc8TsQed9eqnqJct2c5v";
             var spotifyService = SpotifyService.Instance;
@@ -49,7 +51,29 @@ namespace ClementPaulSpotifyApp
                     artistImage.Source = image.Source;
                 }
 
+                foreach (var genre in artist.Genres)
+                {
+                    var genreLabel = new Label
+                    {
+                        Text = genre,
+                        FontSize = 16,
+                        TextColor = Color.Black,
+                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                        VerticalOptions = LayoutOptions.CenterAndExpand
+                    };
 
+                    // Ajouter le label au layout approprié
+                    genres.Children.Add(genreLabel);
+                }
+
+                var followers = artist.Followers.Total;
+                if (followers != null)
+                {
+                    artistFollowers.Text = followers.ToString();
+                }
+
+                loadingIndicator.IsVisible = false;
+                loadingIndicator.IsRunning = false;
 
             }
             else
