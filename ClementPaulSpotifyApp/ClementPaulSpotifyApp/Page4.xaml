@@ -4,6 +4,13 @@
              x:Class="ClementPaulSpotifyApp.Page4">
     <ContentPage.Content>
         <StackLayout>
+            <ActivityIndicator x:Name="loadingIndicator" 
+                   Color="Black"
+                   IsRunning="False"
+                   IsVisible="False"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+            
             <Label Text="Welcome from page 4"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

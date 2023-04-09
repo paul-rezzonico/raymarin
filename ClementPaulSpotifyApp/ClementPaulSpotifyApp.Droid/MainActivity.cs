@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace ClementPaulSpotifyApp.Droid
 {
-    [Activity(Label = "ClementPaulSpotifyApp", Theme = "@style/MainTheme", MainLauncher = true,
+    [Activity(Label = "Raymarin",Icon ="@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
