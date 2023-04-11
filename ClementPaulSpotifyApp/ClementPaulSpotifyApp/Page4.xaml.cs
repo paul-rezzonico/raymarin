@@ -1,10 +1,12 @@
-﻿using ClementPaulSpotifyApp.Service;
+﻿using ClementPaulSpotifyApp;
+using ClementPaulSpotifyApp.Service;
+using SpotifyAPI.Web;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,7 +26,6 @@ namespace ClementPaulSpotifyApp
             loadingIndicator.IsVisible = true;
             loadingIndicator.IsRunning = true;
 
-            const string ALBUM_ID = "26IdRjba8f8DNa7c0FwfQb";
             var spotifyService = SpotifyService.Instance;
             bool isConnected = await spotifyService.ConnectSpotify();
             if (isConnected)
@@ -33,6 +34,9 @@ namespace ClementPaulSpotifyApp
 
                 // Utiliser le client Spotify pour effectuer des opérations
                 var spotify = Service.SpotifyService.Instance.GetSpotifyClient();
+                
+                // Afficher les artistes le plus populaires du moment :
+
 
 
             }
@@ -43,7 +47,58 @@ namespace ClementPaulSpotifyApp
 
             loadingIndicator.IsVisible = false;
             loadingIndicator.IsRunning = false;
-
         }
+        private async void Recherche(object sender, EventArgs e)
+        {
+            var spotifyService = SpotifyService.Instance;
+            bool isConnected = await spotifyService.ConnectSpotify();
+            if (isConnected)
+            {
+                var client = spotifyService.GetSpotifyClient();
+
+                // Utiliser le client Spotify pour effectuer des opérations
+                var spotify = Service.SpotifyService.Instance.GetSpotifyClient();
+                var search = await spotify.Search.Item(new SearchRequest(SearchRequest.Types.Artist, txtArtiste.Text));
+                var artist = search.Artists.Items.FirstOrDefault();
+                
+                //Afficher les infos de l'artiste si il existe
+                if (artist != null)
+                {
+                    lblNom.Text = artist.Name;
+                    lblGenre.Text = artist.Genres.FirstOrDefault();
+                    lblPopularite.Text = artist.Popularity.ToString();
+                    lblFollowers.Text = artist.Followers.Total.ToString();
+                    btnUrl.Text = artist.ExternalUrls.FirstOrDefault().Value;
+                    imgArtiste.Source = artist.Images.FirstOrDefault().Url;
+                }
+                else
+                {
+                    lblNom.Text = "Artiste non trouvé";
+                    lblGenre.Text = "";
+                    lblPopularite.Text = "";
+                    lblFollowers.Text = "";
+                    btnUrl.Text = "";
+                    imgArtiste.Source = "";
+                }
+
+            }
+            else
+            {
+                // Connexion échouée, afficher un message d'erreur
+            }
+        }
+
+        [Obsolete]
+        private void OpenUrl(object sender, EventArgs e)
+        {
+            var url = btnUrl.Text;
+            if (!string.IsNullOrEmpty(url))
+            {
+                Xamarin.Forms.Device.OpenUri(new Uri(url));
+            }
+        }
+
     }
+    
 }
+

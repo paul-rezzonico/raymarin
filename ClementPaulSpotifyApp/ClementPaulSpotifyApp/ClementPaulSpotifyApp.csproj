@@ -18,7 +18,9 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="RestSharp" Version="110.2.0" />
         <PackageReference Include="SpotifyAPI.Web" Version="7.0.0" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
     </ItemGroup>
 
@@ -35,9 +37,5 @@
       <EmbeddedResource Update="Page4.xaml">
         <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       </EmbeddedResource>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Services" />
     </ItemGroup>
 </Project>

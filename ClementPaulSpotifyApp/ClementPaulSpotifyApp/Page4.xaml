@@ -10,10 +10,27 @@
                    IsVisible="False"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand"/>
+
+            <StackLayout>
+                <Entry x:Name="txtArtiste" Placeholder="Nom de l'artiste" />
+                <Button Text="Rechercher" Clicked="Recherche" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="{Binding NomArtiste}" x:Name="lblNom" />
+                <Label Text="{Binding GenreArtiste}" x:Name="lblGenre" />
+                <Label Text="{Binding PopulariteArtiste}" x:Name="lblPopularite" />
+                <Label Text="{Binding FollowersArtiste}" x:Name="lblFollowers" />
+                <Button Text="{Binding UrlArtiste}" x:Name="btnUrl"
+                    TextColor="Blue"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    Clicked="OpenUrl" />
+                <Image Source="{Binding ImageArtiste}" x:Name="imgArtiste" />
+            </StackLayout>
             
-            <Label Text="Welcome from page 4"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

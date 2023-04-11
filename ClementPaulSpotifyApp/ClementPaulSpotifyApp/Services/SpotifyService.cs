@@ -6,7 +6,6 @@ namespace ClementPaulSpotifyApp.Service
 {
     public class SpotifyService
     {
-        const string TokenSpotify = "BQCyvYqip3k0kOsUrvKuafXAvGwW7QmGY4kDBNuDAhxhtPxjX0JhyT_SSgt4vo1JtyAI_hFphAp5gprfQyZnRdECK41Z_MNSgeQKOh8KH0Oo1s1YCPPc";
         private SpotifyClient _spotifyClient;
         #region Instance
 
@@ -18,7 +17,10 @@ namespace ClementPaulSpotifyApp.Service
         {
             try
             {
-                _spotifyClient = new SpotifyClient(TokenSpotify);
+               var config = SpotifyClientConfig
+                    .CreateDefault()
+                    .WithAuthenticator(new ClientCredentialsAuthenticator("ebdf1f5d484c4fcfb28a417b5a476c6f", "bf7e92610bf5439285c09b7c6330a08c"));
+                _spotifyClient = new SpotifyClient(config);
                 return await Task.FromResult(true);
             }
             catch (Exception exception)
@@ -31,5 +33,6 @@ namespace ClementPaulSpotifyApp.Service
         {
             return _spotifyClient;
         }
+
     }
 }
