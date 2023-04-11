@@ -68,9 +68,9 @@ namespace ClementPaulSpotifyApp
                 if (artist != null)
                 {
                     lblNom.Text = artist.Name;
-                    lblGenre.Text = artist.Genres.FirstOrDefault();
-                    lblPopularite.Text = artist.Popularity.ToString();
-                    lblFollowers.Text = artist.Followers.Total.ToString();
+                    lblGenre.Text = "genre :" + artist.Genres.FirstOrDefault();
+                    lblPopularite.Text = "popularité :" + artist.Popularity.ToString() + "/100";
+                    lblFollowers.Text = "nombre de followers :" + artist.Followers.Total.ToString();
                     btnUrl.Text = artist.ExternalUrls.FirstOrDefault().Value;
                     imgArtiste.Source = artist.Images.FirstOrDefault().Url;
                 }

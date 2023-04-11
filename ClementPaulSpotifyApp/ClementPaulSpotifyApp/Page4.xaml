@@ -29,6 +29,7 @@
                 <Image Source="{Binding ImageArtiste}" x:Name="imgArtiste" HeightRequest="200" />
             </StackLayout>
 
+            <Label Text="Groupe de Kpop du moment :" FontAttributes="Bold" FontSize="Medium"  HorizontalOptions="CenterAndExpand"/>
             <ListView x:Name="listViewArtists" ItemsSource="{Binding}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
