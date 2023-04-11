@@ -34,10 +34,13 @@ namespace ClementPaulSpotifyApp
 
                 // Utiliser le client Spotify pour effectuer des opérations
                 var spotify = Service.SpotifyService.Instance.GetSpotifyClient();
-                
+
                 // Afficher les artistes le plus populaires du moment :
+                // Obtenir les artistes les plus populaires
+                List<FullArtist> artists = await GetPopularArtists();
 
-
+                // Afficher les artistes dans une liste
+                listViewArtists.ItemsSource = artists;
 
             }
             else
@@ -97,7 +100,26 @@ namespace ClementPaulSpotifyApp
                 Xamarin.Forms.Device.OpenUri(new Uri(url));
             }
         }
+        private async Task<List<FullArtist>> GetPopularArtists()
+        {
+            // Initialisation de l'API SpotifyAPI.Web
+            var spotifyService = SpotifyService.Instance;
+            var spotify = spotifyService.GetSpotifyClient();
 
+            // Recherche des artistes de K-Pop (girl groups)
+            var search = await spotify.Search.Item(new SearchRequest(SearchRequest.Types.Artist, "K-Pop girl group"));
+
+            if (search != null && search.Artists != null && search.Artists.Items != null)
+            {
+                // Récupération des artistes
+                List<FullArtist> artists = search.Artists.Items;
+                return artists;
+            }
+            else
+            {
+                return null;
+            }
+    }
     }
     
 }

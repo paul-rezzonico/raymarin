@@ -26,11 +26,20 @@
                     BackgroundColor="Transparent"
                     BorderColor="Transparent"
                     Clicked="OpenUrl" />
-                <Image Source="{Binding ImageArtiste}" x:Name="imgArtiste" />
+                <Image Source="{Binding ImageArtiste}" x:Name="imgArtiste" HeightRequest="200" />
             </StackLayout>
-            
-            
 
+            <ListView x:Name="listViewArtists" ItemsSource="{Binding}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" HorizontalOptions="CenterAndExpand">
+                                <Label Text="{Binding Name}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
