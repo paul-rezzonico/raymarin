@@ -1,18 +1,59 @@
 # Raymarin App
 
-## Description
-Raymarin is a mobile application developed using Xamarin Forms, designed to interact with the Spotify API. It allows users to search for and display information about artists and albums, showcasing details such as musical genres, follower counts, popularity, and more. This application is just a training to test interaction with spotify API.
+## Overview
+
+<table>
+  <tr>
+    <td>
+      <img src=./Logo.png width=200px />
+    </td>
+    <td>
+      <p>Raymarin is a mobile application developed using Xamarin Forms, designed to interact with the Spotify API. It allows users to search for and display information about artists and albums, showcasing details such as musical genres, follower counts, popularity, and more. This application is just a training to test interaction with spotify API.
+      </p>
+    </td>
+  </tr>
+</table>
 
 ## Features
-Artist Search: Find detailed information about your favorite artists.
-Album Details: Explore albums with information like release dates and track titles.
+- K/DA information: Learn more about the K/DA group and its members, powered by Spotify api.
+- Artist Search: Find detailed information about your favorite artists.
+- Album Details: Explore albums with information like release dates and track titles.
 
 ## Interface Preview
 
-<img src="https://drive.google.com/uc?export=view&id=1adQiLlgvwg17DH3N3umtLki057dKNUJG" width="280" >   
-<img src="https://drive.google.com/uc?export=view&id=1Yusz6oc46nNqA3nd-vp-bXtGy3pIy4Tg" width="280" > 
-<img src="https://drive.google.com/uc?export=view&id=1EmDYlh8hP4SR6zpmIi-W6-yU8pnq0s9I" width="280" >
-<img src="https://drive.google.com/uc?export=view&id=1yUjiEqEB-VfEQHAqqk2zKn7c1ZClD7wl" width="280" >
+<table>
+  <tr>
+    <td>
+        <img src="https://drive.google.com/uc?export=view&id=1adQiLlgvwg17DH3N3umtLki057dKNUJG" width="280" > 
+    </td>
+    <td>
+       <p> The main page of the application. </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://drive.google.com/uc?export=view&id=1Yusz6oc46nNqA3nd-vp-bXtGy3pIy4Tg" width="280" >
+    </td>
+    <td>
+         <p> The second page of the application, displaying information about K/DA artists group on Spotify. </p>
+    </td>
+  </tr>
+    <tr>
+        <td>
+            <img src="https://drive.google.com/uc?export=view&id=1EmDYlh8hP4SR6zpmIi-W6-yU8pnq0s9I" width="280" >
+        </td>
+        <td>
+            <p> The third page of the application, displaying information about K/DA ALL OUT album on Spotify. </p>
+    </td>
+  </tr>
+    <tr>
+        <td>
+            <img src="https://drive.google.com/uc?export=view&id=1yUjiEqEB-VfEQHAqqk2zKn7c1ZClD7wl" width="280" >
+        </td>
+        <td>
+            <p> The fourth page of the application, allowing to search for an artist on Spotify. </p>
+    </td>
+  </table>
 
 ## How It Works ?
 The application uses the Spotify API to fetch data. Here's an overview of the main pages:
@@ -41,5 +82,5 @@ Instructions on how to install and set up the application.
 (Indicate the type of license under which the project is distributed, e.g., MIT, GPL, etc.)
 
 # Authors
-Paul Rezzonico
-Clement Raynaud 
+- Paul Rezzonico
+- Clement Raynaud 
