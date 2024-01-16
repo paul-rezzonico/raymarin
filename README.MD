@@ -80,8 +80,9 @@ Instructions on how to install and set up the application.
 
 ## Video demo of the app
 [![Watch the video](https://img.youtube.com/vi/9Z3X6Y5Z8Zo/maxresdefault.jpg)](https://www.youtube.com/watch?v=gx4EluKXDfQ&ab_channel=carlodrift)
+
 ## License
-(Indicate the type of license under which the project is distributed, e.g., MIT, GPL, etc.)
+This project is licensed under the MIT License.
 
 # Authors
 - Paul Rezzonico
