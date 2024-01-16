@@ -93,6 +93,6 @@ Instructions on how to install and set up the application.
 ## License
 This project is licensed under the MIT License.
 
-# Authors
+## Authors
 - Paul Rezzonico
 - Clement Raynaud 
